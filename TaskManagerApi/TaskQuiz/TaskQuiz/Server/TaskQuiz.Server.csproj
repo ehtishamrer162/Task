@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migration\20231226184919_init.Design.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Migration\20231226184919_init.Design.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Client\TaskQuiz.Client.csproj" />
+    <ProjectReference Include="..\Shared\TaskQuiz.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
